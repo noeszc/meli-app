@@ -1,3 +1,4 @@
+console.log('called')
 module.exports = {
   collectCoverageFrom: [
     '**/*.{js,jsx,ts,tsx}',
@@ -24,7 +25,7 @@ module.exports = {
   transform: {
     // Use babel-jest to transpile tests with the next/babel preset
     // https://jestjs.io/docs/configuration#transform-objectstring-pathtotransformer--pathtotransformer-object
-    '^.+\\.(js|jx|ts|tsx)$': ['babel-jest', {presets: ['next/babel']}],
+    '^.+\\.(js|jx|ts|tsx)$': 'ts-jest',
   },
   transformIgnorePatterns: [
     '/node_modules/',
