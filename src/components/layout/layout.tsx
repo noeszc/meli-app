@@ -1,5 +1,8 @@
-import {Link} from 'components/link'
 import React from 'react'
+
+import {Link} from 'components/link'
+import {SearchBar} from 'components/search'
+
 import styles from './layout.module.scss'
 
 export const Header: React.FC = () => {
@@ -9,7 +12,7 @@ export const Header: React.FC = () => {
         <Link href="/" className={styles.header__logo}>
           Mercado Libre
         </Link>
-        <div>slot seachbar</div>
+        <SearchBar />
       </div>
     </div>
   )

@@ -93,7 +93,7 @@ export const fetchDescription = (id: string) =>
 // validateSearchBody ::
 export const validateSearchBody = initMiddleware(
   validateMiddleware(
-    [ check('q').isAlpha() ],
+    [ check('q').not().isEmpty() ],
     validationResult
   ),
 )

@@ -1,4 +1,9 @@
+@import 'settings';
 @import 'generic/generic';
+
+body {
+  background-color: $gray-200;
+}
 
 #__next {
   display: flex;
