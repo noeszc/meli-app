@@ -32,19 +32,6 @@ describe('/api/items/:id', () => {
   })
 
   test('should return a item', async () => {
-    const mockResponse = {
-      author: {name: '', lastname: ''},
-      condition: '',
-      description: {},
-      price: {
-        currency: '',
-        amount: '',
-        decimals: '',
-      },
-      picture: '',
-      free_shipping: false,
-    }
-
     const response = await request.get('/items/').query({id: 'MLA921509653'})
 
     expect(response.status).toBe(200)
