@@ -6,9 +6,7 @@ import type {LinkProps as NextLinkProps} from 'next/link'
 import cx from 'clsx'
 import {WithChildren} from 'utils/types'
 
-export type LinkExtendedProps = {
-  variantColor?: 'blue' | 'none'
-}
+export type LinkExtendedProps = {}
 
 export type LinkProps = LinkExtendedProps & React.HTMLProps<{}>
 

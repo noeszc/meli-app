@@ -68,7 +68,7 @@ const extractItems = compose(map(normItem), prop('results'))
 
 // TODO
 // extractCategories ::
-const extractCategories = compose(always([]))
+const extractCategories = compose(always(['a', 'b', 'c']))
 
 // normSearch :: Object -> Object
 export const normSearch = compose(
