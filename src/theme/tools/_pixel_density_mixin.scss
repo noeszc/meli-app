@@ -1,0 +1,56 @@
+@mixin for-res($size) {
+  @if $size == ldpi-up {
+    // 2017 LG 34" Ultrawide
+    @media
+    (min-resolution: 90dpi),
+    (min-resolution: 1dppx),
+    (-webkit-min-device-pixel-ratio: 1),
+    (min--moz-device-pixel-ratio: 1) {
+      @content;
+    }
+  } @else if $size == mdpi-up {
+    // Fire HD 8 Tablet
+    @media
+    (min-resolution: 120dpi),
+    (min-resolution: 1.3dppx),
+    (-webkit-min-device-pixel-ratio: 1.3),
+    (min--moz-device-pixel-ratio: 1.3) {
+      @content;
+    }
+  } @else if $size == hdpi-up {
+    @media
+    (min-resolution: 160dpi),
+    (min-resolution: 2dppx),
+    (-webkit-min-device-pixel-ratio: 1.5),
+    (min--moz-device-pixel-ratio: 1.5) {
+      @content;
+    }
+  } @else if $size == xhdpi-up {
+    // iPhone 7
+    @media
+    (min-resolution: 240dpi),
+    (min-resolution: 2dppx),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min--moz-device-pixel-ratio: 2) {
+      @content;
+    }
+  } @else if $size == xxhdpi-up {
+    // iPhone X (listed as having a pixel density of 462.63 but 
+    / -webkit-min-device-pixel-ratio is 3) ¯\_(ツ)_/¯
+    @media
+    (min-resolution: 320dpi),
+    (min-resolution: 3dppx),
+    (-webkit-min-device-pixel-ratio: 3),
+    (min--moz-device-pixel-ratio: 3) {
+      @content;
+    }
+  } @else if $size == xxxhdpi-up {
+    @media
+    (min-resolution: 480dpi),
+    (min-resolution: 4dppx),
+    (-webkit-min-device-pixel-ratio: 4),
+    (min--moz-device-pixel-ratio: 4) {
+      @content;
+    }
+  }
+}
