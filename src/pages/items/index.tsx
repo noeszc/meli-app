@@ -3,6 +3,7 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
 } from 'components/breadcrumb/breadcrumb'
+import {SearchResults} from 'components/search'
 import {getSearchsServerProps} from 'components/search/get-search-server-props'
 import {isEmpty} from 'lodash/fp'
 import {GetServerSideProps} from 'next'
@@ -12,10 +13,9 @@ import {Dict} from 'utils/types'
 const EmptyResults: React.FC = () => <div>Not Results</div>
 
 export default function ItemsIndexPage({data}: Dict) {
-  const {items, categories: breadcrumbs} = data
+  const {items: results} = data
 
-  if (isEmpty(items)) return <EmptyResults />
-
+  return <SearchResults results={results} />
   return (
     <div>
       <Breadcrumb separator={<>&rsaquo;</>}>
