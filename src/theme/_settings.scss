@@ -5,8 +5,11 @@ $gray-300: #999999;
 $gray-400: #666666;
 $gray-500: #333333;
 
+$space-1x: 4px;
 $space-2x: 8px;
 $space-4x: 16px;
+$space-5x: 18px;
+$space-10x: 40px;
 $space-gap: 24px;
 
 $page-width: 1000px;
@@ -17,3 +20,9 @@ $breakpoints: (
   'md': ( min-width:  992px ),
   'lg':  ( min-width: 1200px )
 ) !default;
+
+
+$radius-xs: $space-1x;
+
+$font-xl: $space-5x;
+$font-md: $space-4x;

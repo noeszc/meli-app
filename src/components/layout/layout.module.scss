@@ -1,22 +1,27 @@
 @import '~theme/theme';
 
-.header {
-  background-color: $yellow-300;
-  padding-top: $space-2x;
-  padding-bottom: $space-2x;
-  &__wrap {
+.container {
    width: 100%;
    max-width: $page-width;
    margin: auto;
    padding-left: $page-margin;
    padding-right: $page-margin;
+}
 
-   display: flex;
-   flex-direction: row;
-   align-items: center;
+.header {
+  background-color: $yellow-300;
+  padding-top: $space-2x;
+  padding-bottom: $space-2x;
+
+  &__wrap {
+    @extend .container;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
   &__logo {
+    flex-grow: 0;
     background-image: url('/assets/logo_ml.png');
     background-size: contain;
     display: block;
@@ -27,13 +32,10 @@
 
     @include for-res(xhdpi-up){
       background-image: url('/assets/logo_ml@2x.png');
-    } 
+    }
   }
 }
 
 .main {
-  display: flex; 
-  flex-direction: column;
-  flex-grow: 1;
-  width: 100%;
+  @extend .container;
 }
