@@ -17,7 +17,7 @@ export default function ItemsIndexPage({data}: Dict) {
   if (isEmpty(items)) return <EmptyResults />
 
   return (
-    <>
+    <div>
       <Breadcrumb separator={<>&rsaquo;</>}>
         {breadcrumbs.map((xs: string, x: number) => (
           <BreadcrumbItem key={x} isCurrentPage={x === breadcrumbs.length - 1}>
@@ -25,7 +25,7 @@ export default function ItemsIndexPage({data}: Dict) {
           </BreadcrumbItem>
         ))}
       </Breadcrumb>
-    </>
+    </div>
   )
 }
 

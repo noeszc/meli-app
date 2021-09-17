@@ -95,8 +95,6 @@ export const BreadcrumbItem: React.FC<BreadcrumbItemProps> = ({
     className,
   )
 
-  console.log(separator)
-
   return (
     <li {...rest} className={_className}>
       {clones}
