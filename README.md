@@ -1,34 +1,82 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Contents
 
-## Getting Started
+- [Todo](#todo)
+- [Configuration](#configuration)
 
-First, run the development server:
+## Todo
+- Format amount based on the country's currency
+- Add `next-seo` to bring SEO 
+- Add unit tests for React not only the API
+
+
+## Configuration
+
+Make sure that you have Node.js v12.x and yarn v1.22.5 or above installed
+
+### Project structure
 
 ```bash
-npm run dev
-# or
+├── README.md
+├── jest.config.js
+├── next-env.d.ts
+├── next.config.js
+├── package.json
+├── public
+│   └── assets
+├── src
+│   ├── components
+│   ├── lib
+│   ├── pages
+│   ├── theme
+│   └── utils
+├── testing
+├── tsconfig.json
+└── yarn.lock
+```
+
+### Environment variables
+
+It’s necessary to create a **environment variables** (**.env**) file for the correct execution of this system. This file must be created in the _root_ of the project:
+
+```Shell
+touch .env
+```
+
+Next, there’re listed the necessary variables with example values.
+
+| variable                               | value                               | description                                                 |
+| -------------------------------------- | ----------------------------------- | ----------------------------------------------------------- |
+| NEXT_MELI_API_PROXY_URL                | https://https://api.mercadolibre.com| Mercado Libre API URL       |
+
+
+## Initialization
+
+```Shell
+yarn install
+```
+
+Installs all the dependencies defined in a `package.json` file.
+
+## Server
+
+### Development
+
+```Shell
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Starts the development server and makes your application accessible at `localhost:3000.` Changes in the application code will be hot-reloaded.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Building
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```Shell
+yarn build
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Creates an optimized production build of the web site 
 
-## Learn More
+## Testing
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```Shell
+yarn test
+```
