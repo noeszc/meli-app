@@ -6,4 +6,7 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, './src/theme/'), './node_modules/'],
   },
+  images: {
+    domains: ['http2.mlstatic.com'],
+  },
 }
