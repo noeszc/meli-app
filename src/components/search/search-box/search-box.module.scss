@@ -1,0 +1,27 @@
+@import '~theme/theme';
+
+.search-box {
+  margin-left: $page-margin;
+  width: 100%;
+
+  &__input {
+    padding-right: $space-10x;
+  }
+
+  &__button {
+    background-color: $gray-200;
+    border: 0;
+    cursor: pointer;
+    display: inline-flex;
+    outline: none;
+    width: $space-10x;
+    align-items: center;
+    justify-content: center;
+  }
+
+ &__input,
+ &__button { 
+   color: $gray-500;
+   height: $space-10x;
+ }
+}

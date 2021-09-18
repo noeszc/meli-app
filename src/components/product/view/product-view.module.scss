@@ -1,0 +1,95 @@
+@import '~theme/theme';
+
+.single {
+  background-color: white;
+  margin-top: $space-8x;
+  border-radius: $radius-xs;
+  margin-bottom: $space-16x;
+
+  &__detail {
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to('sm'){
+      flex-direction: row;
+    }
+  }
+
+  &__fig {
+    margin: $space-8x 0 0 0;
+
+    @include respond-to('sm'){
+      width: 70%;
+    }
+
+    > img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__info {
+    padding: $space-8x $space-8x 0 $space-8x;
+
+    @include respond-to('sm'){
+      padding-left: $space-4x;
+      width: 30%;
+    }
+  }
+
+  &__metas {
+    font-size: $font-2xs;
+   }
+
+  &__title {
+    margin: $space-4x 0 $space-8x;
+    font-size: $font-2xl;
+  }
+
+  &__price {
+    margin: 0 0 $space-8x 0;
+
+    font-size: $font-3xl;
+    line-height: 1;
+  }
+
+  &__btn {
+    width: 100%;
+    padding: $space-2x;
+
+    background-color: $blue-300;
+    border-radius: $radius-xs;
+    border: none;
+    color: white;
+  }
+
+  &__desc {
+    padding: 0 $space-8x $space-8x;
+    margin-top: $space-16x;
+
+    @include respond-to('sm'){
+      max-width: 70%;
+    }
+
+    &-head {
+      margin-bottom: $space-8x;
+    }
+
+    &-title {
+      margin: 0;
+
+      line-height: 1;
+      font-weight: normal;
+    }
+
+    &-text {
+      margin: 0;
+
+      font-size: $font-normal;
+      line-height: 1.25;
+
+      color: $gray-300;
+    }
+  }
+}

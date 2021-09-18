@@ -1,0 +1,29 @@
+@import '~theme/theme';
+
+.breadcrumb {
+  padding-top: $space-4x; 
+  padding-bottom: $space-4x;
+  ol, ul {
+    margin: 0;
+  }
+
+  &__separator {
+    margin-left: $space-2x;
+    margin-right: $space-2x;
+  }
+
+  &__item {
+    display: inline-flex;
+    color: $gray-500;
+    align-items: center;
+    &--current {
+      font-weight: bold;
+    }
+  }
+
+  &__link {
+    color: $gray-500;
+    text-decoration: none;
+    font-size: 14px
+  }
+}
