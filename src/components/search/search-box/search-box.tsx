@@ -1,13 +1,11 @@
 import * as React from 'react'
+import {compose, size} from 'lodash/fp'
 import {useRouter} from 'next/router'
 import {useForm, SubmitHandler} from 'react-hook-form'
 
 import {Input, InputGroup, InputRightElement} from 'components/input'
+import {SearchIcon} from 'components/icons'
 import styles from './search-box.module.scss'
-import {SearchIcon} from './search-icon'
-import {compose, juxt, size} from 'lodash/fp'
-import {isString} from 'lodash'
-import {trace} from 'utils/function'
 
 type FormValues = {
   query: string

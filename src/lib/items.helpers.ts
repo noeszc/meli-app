@@ -32,6 +32,12 @@ const isValidId = (xs: string) =>
 // takeItemProps :: Object -> Object
 const takeItemProps = pick(['id', 'title', 'condition', 'sold_quantity'])
 
+const takeItemStateName = compose(
+  zipObj(['address_state_name']),
+  (x) => [x],
+  prop('address.state_name'),
+)
+
 // takeItemPic :: Object -> Object
 const takeItemPic = compose(
   zipObj(['picture']),
@@ -41,7 +47,7 @@ const takeItemPic = compose(
 
 // takeItemFreeShip :: Object -> Object
 const takeItemFreeShip = compose(
-  zipObj(['free_shipping ']),
+  zipObj(['free_shipping']),
   (x) => [x],
   path(['shipping', 'free_shipping']),
 )
@@ -64,7 +70,13 @@ const addAuthor = compose(
 const addItem = compose(
   (item) => ({item}),
   mergeAll,
-  juxt([takeItemProps, takeItemPic, takeItemPrice, takeItemFreeShip]),
+  juxt([
+    takeItemProps,
+    takeItemStateName,
+    takeItemPic,
+    takeItemPrice,
+    takeItemFreeShip,
+  ]),
 )
 // normItem :: Object -> Object
 export const normItem = compose(mergeAll, juxt([addAuthor, addItem]))
