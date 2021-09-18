@@ -1,5 +1,7 @@
 $yellow-300: #ffe600;
 
+$blue-300: #3483FA;
+
 $gray-200: #eeeeee;
 $gray-300: #999999;
 $gray-400: #666666;
@@ -13,6 +15,8 @@ $space-5x: 18px;
 $space-6x: 24px;
 $space-8x: 32px;
 $space-10x: 40px;
+$space-11x: 46px;
+$space-16x: 64px;
 $space-gap: 24px;
 
 $page-width: 1000px;
@@ -28,6 +32,9 @@ $breakpoints: (
 $radius-xs: $space-1x;
 
 $font-xs: $space-3x;
+$font-2xs: $space-3x + 2px;
+$font-normal: $space-4x;
 $font-xl: $space-5x;
 $font-2xl: $space-6x;
+$font-3xl: $space-11x;
 $font-md: $space-4x;

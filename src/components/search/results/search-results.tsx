@@ -6,16 +6,20 @@ import * as React from 'react'
 import {Dict} from 'utils/types'
 import styles from './search-results.module.scss'
 
+// getHref :: Object -> String
 const getHref = compose(
   (href) => ({href}),
   (xs: string) => `/items/${xs}`,
   prop('id'),
 )
 
+// takeLinkProps :: Object -> Object
 const takeLinkProps = pick(['title'])
 
+// addStyles :: a -> Object
 const addStyles = constant({className: styles.product__link})
 
+// getLinkProps :: Object -> Object
 const getLinkProps = compose(
   mergeAll,
   juxt([getHref, takeLinkProps, addStyles]),
