@@ -2,7 +2,10 @@
 
 .breadcrumb {
   padding-top: $space-4x; 
-  padding-bottom: $space-4x; 
+  padding-bottom: $space-4x;
+  ol, ul {
+    margin: 0;
+  }
 
   &__separator {
     margin-left: $space-2x;

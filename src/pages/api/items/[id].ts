@@ -15,15 +15,13 @@ const handleGetItem = async (req: NextApiRequest, res: NextApiResponse) => {
   await validateItemBody(req, res)
   const errors = validationResult(req)
 
-  console.log(req.query)
-
   if (!errors.isEmpty()) return res.status(422).json({errors: errors.array()})
+
   try {
     const {id} = req.query as any
     const item = await fetchItem(id).then(normItem)
     const description = await fetchDescription(id)
-
-    const body = assoc('description', description, item)
+    const body = assoc('item.description', description, item)
 
     return res.status(200).json(body)
   } catch (err: any) {
