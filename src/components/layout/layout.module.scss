@@ -21,11 +21,12 @@
   }
 
   &__logo {
-    flex-grow: 0;
+    flex-shrink: 0;
     background-image: url('/assets/logo_ml.png');
+    background-position: center center;
     background-size: contain;
     display: block;
-    height: 36px;
+    height: 40px;
     overflow: hidden;
     width: 53px;
     text-indent: -999px;
